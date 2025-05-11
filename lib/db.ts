@@ -1,5 +1,13 @@
 import { Pool } from "pg"
 
+// Configuração para evitar o uso de módulos específicos do Cloudflare
+// @ts-ignore
+import pg from "pg"
+// Desabilitar o uso de módulos nativos do Cloudflare
+if (pg.native) {
+  delete pg.native
+}
+
 const pool = new Pool({
   host: process.env.DB_HOST || "185.250.37.34",
   port: Number.parseInt(process.env.DB_PORT || "5432"),
