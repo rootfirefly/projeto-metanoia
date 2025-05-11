@@ -19,6 +19,8 @@ interface Lesson {
   materials: Material[]
 }
 
+// Verificar se este arquivo está usando os parâmetros corretos
+// Deve usar [journeyId] e [lessonId]
 interface LessonPageProps {
   params: {
     journeyId: string

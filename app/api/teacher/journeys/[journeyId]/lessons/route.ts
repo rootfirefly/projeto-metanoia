@@ -3,6 +3,8 @@ import { getUserFromRequest, isTeacher } from "@/lib/auth"
 import { query } from "@/lib/db"
 import { saveFile } from "@/lib/file-utils"
 
+// Verificar se este arquivo está usando os parâmetros corretos
+// Deve usar [journeyId]
 export async function POST(request: NextRequest, { params }: { params: { journeyId: string } }) {
   try {
     const user = await getUserFromRequest(request)

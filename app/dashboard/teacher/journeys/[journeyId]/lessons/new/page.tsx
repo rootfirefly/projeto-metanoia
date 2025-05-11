@@ -12,6 +12,8 @@ interface Material {
   content: string | File
 }
 
+// Verificar se este arquivo está usando o parâmetro correto
+// Deve usar [journeyId]
 export default function NewLessonPage({ params }: { params: { journeyId: string } }) {
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")

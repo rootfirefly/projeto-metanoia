@@ -2,6 +2,8 @@ import { type NextRequest, NextResponse } from "next/server"
 import { getUserFromRequest, isTeacher } from "@/lib/auth"
 import { query } from "@/lib/db"
 
+// Verificar se este arquivo está usando os parâmetros corretos
+// Deve usar [journeyId] e [lessonId]
 export async function POST(request: NextRequest, { params }: { params: { journeyId: string; lessonId: string } }) {
   try {
     const user = await getUserFromRequest(request)
